@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "start-storybook -p 6006 -s public",
+    "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "serve-storybook": "serve storybook-static"
   },
