@@ -6,7 +6,8 @@ function getAbsolutePath(value) {
 
 /** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
-  stories: ["../src/components/**/*.stories.tsx"],
+  stories: ["../src/pages/**/*.stories.mdx",
+  "../src/stories/**/*.stories.tsx"],
   addons: [
     getAbsolutePath("@storybook/addon-links"),
     getAbsolutePath("@storybook/addon-essentials"),
@@ -20,12 +21,5 @@ const config = {
   docs: {
     autodocs: "tag",
   },
-  viteFinal: (config, { configType }) => {
-    if (configType === 'PRODUCTION') {
-      config.base = '/nebula-ui/'
-    }
-
-    return config
-  }
 };
 export default config;

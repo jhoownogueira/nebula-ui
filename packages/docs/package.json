@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "storybook dev -p 6006",
-    "build": "storybook build && touch ./storybook-static/.nojekyll",
-    "deploy-storybook": "storybook-to-ghpages"
+    "dev": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "serve-storybook": "serve storybook-static"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +27,7 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "^7.2.1"
+    "storybook": "^7.2.1",
+    "vercel": "^31.2.2"
   }
 }
