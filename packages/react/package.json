@@ -1,5 +1,5 @@
 {
-  "name": "@nebula-ui/react",
+  "name": "@orioncore/react",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
@@ -14,8 +14,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@nebula-ui/ts-config": "*",
-    "@nebula-ui/tokens": "*",
+    "@orioncore/tokens": "*",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "react": "^18.2.0",

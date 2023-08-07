@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '@nebula-ui/tokens'
+import { colors } from '@orioncore/tokens'
 
 interface ButtonsContainerProps {
   bgColor: string;

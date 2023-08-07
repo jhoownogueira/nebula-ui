@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button, ButtonProps } from "@nebula-ui/react";
+import { Button, ButtonProps } from "@orioncore/react";
 
 export default {
   title: 'Form/Button',

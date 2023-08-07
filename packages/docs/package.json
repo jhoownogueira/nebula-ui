@@ -1,5 +1,5 @@
 {
-  "name": "@nebula-ui/docs",
+  "name": "@orioncore/docs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@nebula-ui/react": "*"
+    "@orioncore/react": "*"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.2.1",
