@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { SecondaryButton, SecondaryButtonProps } from "@orioncore/react";
+import { TertiaryButton, TertiaryButtonProps } from "@orioncore/react";
 
 export default {
   title: "Form/Button",
-  component: SecondaryButton,
+  component: TertiaryButton,
   args: {
     variantRadius: "md",
     variantSize: "md",
-    children: "Secondary Button",
+    children: "Tertiary Button",
     disabled: false
   },
   argTypes: {
@@ -24,6 +24,6 @@ export default {
       },
     },
   },
-} as Meta<SecondaryButtonProps>;
+} as Meta<TertiaryButtonProps>;
 
-export const Secondary: StoryObj<SecondaryButtonProps> = {};
+export const Tertiary: StoryObj<TertiaryButtonProps> = {};

@@ -1,5 +1,12 @@
-import styled from 'styled-components'
-import { colors, radii, sizes, fontSizes, fontWeights, fonts } from '@orioncore/tokens'
+import styled from "styled-components";
+import {
+  colors,
+  radii,
+  sizes,
+  fontSizes,
+  fontWeights,
+  fonts,
+} from "@orioncore/tokens";
 
 interface ButtonsContainerProps {
   radius: string;
@@ -10,56 +17,60 @@ interface ButtonsContainerProps {
 
 export const SizeRadius = {
   px: {
-    radius: radii.px
+    radius: radii.px,
   },
   xs: {
-    radius: radii.xs
+    radius: radii.xs,
   },
   sm: {
-    radius: radii.sm
+    radius: radii.sm,
   },
   md: {
-    radius: radii.md
+    radius: radii.md,
   },
   lg: {
-    radius: radii.lg
+    radius: radii.lg,
   },
   full: {
-    radius: radii.full
-  }
-}
+    radius: radii.full,
+  },
+};
 export const SizeButton = {
   xs: {
     height: sizes[6],
     fontSizes: fontSizes.xs,
-    paddingSize: sizes[2]
+    paddingSize: sizes[2],
   },
   sm: {
     height: sizes[8],
     fontSizes: fontSizes.sm,
-    paddingSize: sizes[4]
+    paddingSize: sizes[4],
   },
   md: {
     height: sizes[10],
     fontSizes: fontSizes.md,
-    paddingSize: sizes[5]
+    paddingSize: sizes[5],
   },
   lg: {
     height: sizes[12],
     fontSizes: fontSizes.lg,
-    paddingSize: sizes[6]
-  }
-}
+    paddingSize: sizes[6],
+  },
+};
 
 export const PrimaryButtonContainer = styled.button<ButtonsContainerProps>`
   width: fit-content;
-  height: ${props => props.height};
-  padding-left: ${props => props.paddingSize};
-  padding-right: ${props => props.paddingSize};
+  height: ${(props) => props.height};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-left: ${(props) => props.paddingSize};
+  padding-right: ${(props) => props.paddingSize};
   border: none;
   background: ${colors.primary};
-  border-radius: ${props => props.radius};
-  font-size: ${props => props.fontSize};
+  border-radius: ${(props) => props.radius};
+  font-size: ${(props) => props.fontSize};
   font-family: ${fonts.default};
   font-weight: ${fontWeights.medium};
   color: ${colors.orion_white};
@@ -78,4 +89,4 @@ export const PrimaryButtonContainer = styled.button<ButtonsContainerProps>`
     color: ${colors.primary_ghost_text};
     cursor: not-allowed;
   }
-`
+`;
