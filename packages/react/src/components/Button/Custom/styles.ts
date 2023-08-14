@@ -8,6 +8,7 @@ interface ButtonsContainerProps {
   paddingSize: string;
   color: string;
   backgroundColor: string;
+  wFull?: boolean;
 }
 
 export const SizeRadius = {
@@ -54,7 +55,7 @@ export const SizeButton = {
 }
 
 export const CustomButtonContainer = styled.button<ButtonsContainerProps>`
-  width: fit-content;
+  width: ${props => props.wFull? '100%' : 'fit-content'};
   height: ${props => props.height};
   padding-left: ${props => props.paddingSize};
   padding-right: ${props => props.paddingSize};

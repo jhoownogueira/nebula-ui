@@ -9,6 +9,7 @@ export default {
     variantSize: "md",
     children: "Custom Button",
     disabled: false,
+    wFull: false,
     color: '#fff',
     backgroundColor: '#0f34da'
   },

@@ -8,12 +8,15 @@ import {
   fonts,
 } from "@orioncore/tokens";
 
+type ColorKeys = keyof typeof colors;
+
 interface ButtonsContainerProps {
   radius: string;
   height: string;
   fontSize: string;
   paddingSize: string;
   wFull?: boolean;
+  color: ColorKeys;
 }
 
 export const SizeRadius = {
@@ -59,35 +62,33 @@ export const SizeButton = {
   },
 };
 
-export const PrimaryButtonContainer = styled.button<ButtonsContainerProps>`
-  width: ${props => props.wFull? '100%' : 'fit-content'};
+export const OutlineButtonContainer = styled.button<ButtonsContainerProps>`
+  width: ${(props) => (props.wFull ? "100%" : "fit-content")};
   height: ${(props) => props.height};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
   padding-left: ${(props) => props.paddingSize};
   padding-right: ${(props) => props.paddingSize};
-  border: none;
-  background: ${colors.primary};
+  border: 1px solid
+    ${(props) => (props.color ? colors[props.color] : colors.orion_white)};
+  background: transparent;
   border-radius: ${(props) => props.radius};
   font-size: ${(props) => props.fontSize};
   font-family: ${fonts.default};
   font-weight: ${fontWeights.medium};
-  color: ${colors.orion_white};
+  color: ${(props) => (props.color ? colors[props.color] : colors.orion_white)};
   cursor: pointer;
   &:hover {
     transition: all 0.2s;
-    background: ${colors.primary_hover};
+    filter: invert(0.5);
   }
 
   &:focus {
-    outline: 2px solid ${colors.primary_ghost};
+    outline: 2px solid ${colors.tertiary_ghost};
   }
 
   &:disabled {
-    background: ${colors.primary_ghost};
-    color: ${colors.primary_ghost_text};
+    background: ${colors.tertiary_ghost};
+    color: ${colors.tertiary_ghost_text};
+    border: 1px solid ${colors.tertiary_ghost};
     cursor: not-allowed;
   }
 `;

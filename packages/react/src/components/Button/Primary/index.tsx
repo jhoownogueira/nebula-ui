@@ -1,15 +1,14 @@
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes } from "react";
 import { PrimaryButtonContainer, SizeRadius, SizeButton } from "./styles";
 
-export interface PrimaryButtonProps {
+export interface PrimaryButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variantRadius: "px" | "xs" | "sm" | "md" | "lg" | "full";
   variantSize: "xs" | "sm" | "md" | "lg";
-  children: ReactNode;
-  disabled?: boolean;
+  wFull?: boolean;
 }
 
-export function PrimaryButton({ variantRadius, variantSize, children, disabled }: PrimaryButtonProps) {
+export function PrimaryButton({ variantRadius, variantSize, children, wFull, ...props }: PrimaryButtonProps) {
   const { radius } = SizeRadius[variantRadius];
   const { height, fontSizes, paddingSize } = SizeButton[variantSize];
-  return <PrimaryButtonContainer radius={radius} height={height} fontSize={fontSizes} disabled={disabled} paddingSize={paddingSize}>{children}</PrimaryButtonContainer>;
+  return <PrimaryButtonContainer wFull={wFull} radius={radius} height={height} fontSize={fontSizes} paddingSize={paddingSize}  {...props}>{children}</PrimaryButtonContainer>;
 }

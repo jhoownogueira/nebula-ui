@@ -10,6 +10,7 @@ export default {
     variantRadius: "md",
     variantSize: "md",
     disabled: false,
+    wFull: false,
     children: (
       <>
         <Planet size={20} /> <span>Primary Button</span>

@@ -6,6 +6,7 @@ interface ButtonsContainerProps {
   height: string;
   fontSize: string;
   paddingSize: string;
+  wFull?: boolean;
 }
 
 export const SizeRadius = {
@@ -52,7 +53,7 @@ export const SizeButton = {
 }
 
 export const TertiaryButtonContainer = styled.button<ButtonsContainerProps>`
-  width: fit-content;
+  width: ${props => props.wFull? '100%' : 'fit-content'};
   height: ${props => props.height};
   padding-left: ${props => props.paddingSize};
   padding-right: ${props => props.paddingSize};

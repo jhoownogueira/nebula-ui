@@ -1,13 +1,12 @@
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes } from "react";
 import { SizeRadius, SizeButton, CustomButtonContainer } from "./styles";
 
-export interface CustomButtonProps {
+export interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variantRadius: "px" | "xs" | "sm" | "md" | "lg" | "full";
   variantSize: "xs" | "sm" | "md" | "lg";
   color: string;
   backgroundColor: string;
-  children: ReactNode;
-  disabled?: boolean;
+  wFull?: boolean;
 }
 
 export function CustomButton({
@@ -17,6 +16,7 @@ export function CustomButton({
   disabled,
   color,
   backgroundColor,
+  wFull,
 }: CustomButtonProps) {
   const { radius } = SizeRadius[variantRadius];
   const { height, fontSizes, paddingSize } = SizeButton[variantSize];
@@ -29,6 +29,7 @@ export function CustomButton({
       fontSize={fontSizes}
       disabled={disabled}
       paddingSize={paddingSize}
+      wFull={wFull}
     >
       {children}
     </CustomButtonContainer>

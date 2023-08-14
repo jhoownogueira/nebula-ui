@@ -8,7 +8,8 @@ export default {
     variantRadius: "md",
     variantSize: "md",
     children: "Secondary Button",
-    disabled: false
+    disabled: false,
+    wFull: false,
   },
   argTypes: {
     variantRadius: {

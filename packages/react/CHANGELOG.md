@@ -1,5 +1,11 @@
 # @orioncore/react
 
+## 5.0.0
+
+### Major Changes
+
+- Novos componentes
+
 ## 4.0.0
 
 ### Major Changes
