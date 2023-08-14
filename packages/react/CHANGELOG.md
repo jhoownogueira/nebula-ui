@@ -1,5 +1,11 @@
 # @orioncore/react
 
+## 4.0.0
+
+### Major Changes
+
+- Componente Table
+
 ## 3.0.0
 
 ### Major Changes
