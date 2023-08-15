@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { HTMLProps, ReactNode } from "react";
 import {
   RowTableBodyContainer,
   TableBodyContainer,
@@ -28,7 +28,7 @@ export interface TableBodyProps extends TableProps {
   maxHeightLg?: string;
 }
 
-export interface RowTableBodyProps extends TableProps {
+export interface RowTableBodyProps extends Omit<TableProps, 'children'>, HTMLProps<HTMLTableRowElement> {
   hoverColor?: string;
 }
 
@@ -78,9 +78,9 @@ export function TableBody({
 }
 TableBody.displayName = "TableBody";
 
-export function RowTableBody({ children, hoverColor }: RowTableBodyProps) {
+export function RowTableBody({ children, hoverColor, ...props }: RowTableBodyProps) {
   return (
-    <RowTableBodyContainer hoverColor={hoverColor}>
+    <RowTableBodyContainer hoverColor={hoverColor} {...props}>
       {children}
     </RowTableBodyContainer>
   );
