@@ -58,9 +58,4 @@ export const colors = {
   sup_mocha_brown100: '#725550',
   sup_mocha_brown10: '#A18681',
   sup_mocha_brown60: '#856A66',
-
-  nebula300: '#00B37E',
-  nebula500: '#00875F',
-  nebula700: '#015F43',
-  nebula900: '#00291D',
 }
