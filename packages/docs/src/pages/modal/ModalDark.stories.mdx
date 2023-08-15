@@ -36,7 +36,8 @@ export const MyComponent() {
       iconBgColor="orion_black_box"
       iconColor="orion_white"
       isOpen={isOpen}
-      onOpenChange={onOpenChange} // Opcional, omita para desativar fechamento com "esc" e "click" fora do modal.
+      onOpenChange={onOpenChange}
+      closable={false} // "true" para ativar fechamento com "esc" e "click" fora do modal.
       title="Título do modal"
       width="50%">
 

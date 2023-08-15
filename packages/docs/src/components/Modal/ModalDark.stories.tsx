@@ -66,7 +66,7 @@ export const DarkModal: StoryObj<ModalDarkProps> = (args: any) => {
       <PrimaryButton wFull onClick={handleOpen} variantRadius="md" variantSize="md">
         Abrir
       </PrimaryButton>
-      <ModalDark isOpen={isOpen} onOpenChange={handleOpenChange} {...args}>
+      <ModalDark isOpen={isOpen} onOpenChange={handleOpenChange} closable={false} {...args} >
         <main
           style={{ display: "flex", flexDirection: "column", gap: "0.3rem" }}
         >
@@ -97,5 +97,6 @@ export const DarkModal: StoryObj<ModalDarkProps> = (args: any) => {
 DarkModal.args = {
   title: "Titúlo do Modal",
   iconTitle: <DevToLogo size={24} />,
-  width: "32rem",
+  width: "50%",
+  closable: false,
 };
