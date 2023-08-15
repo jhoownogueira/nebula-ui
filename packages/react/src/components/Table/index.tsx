@@ -39,10 +39,12 @@ export interface TableHeaderProps {
 export function TableRoot({ children }: TableProps) {
   return <TableRootContainer>{children}</TableRootContainer>;
 }
+TableRoot.displayName = "TableRoot";
 
 export function TableHeader({ children }: TableHeaderProps) {
   return <TableHeaderContainer>{children}</TableHeaderContainer>;
 }
+TableHeader.displayName = "TableHeader";
 
 export function TableBody({
   children,
@@ -74,6 +76,7 @@ export function TableBody({
     </TableBodyContainer>
   );
 }
+TableBody.displayName = "TableBody";
 
 export function RowTableBody({ children, hoverColor }: RowTableBodyProps) {
   return (
@@ -82,7 +85,9 @@ export function RowTableBody({ children, hoverColor }: RowTableBodyProps) {
     </RowTableBodyContainer>
   );
 }
+RowTableBody.displayName = "RowTableBody";
 
 export function TableFooter() {
   return <TableFooterContainer />;
 }
+TableFooter.displayName = "TableFooter";

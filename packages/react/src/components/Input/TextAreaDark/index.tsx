@@ -11,3 +11,4 @@ export function TextAreaDark({ children, height, disabled }: TextAreaDarkProps) 
 
   return <TextAreaDarkContainer height={height} disabled={disabled}>{children}</TextAreaDarkContainer>;
 }
+TextAreaDark.displayName = "TextAreaDark";

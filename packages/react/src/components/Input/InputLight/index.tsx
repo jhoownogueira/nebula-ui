@@ -10,3 +10,4 @@ export function InputLight({ children, disabled }: InputLightProps) {
 
   return <InputLightContainer disabled={disabled}>{children}</InputLightContainer>;
 }
+InputLight.displayName = "InputLight";

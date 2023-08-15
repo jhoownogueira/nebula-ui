@@ -11,3 +11,4 @@ export function TextAreaLight({ children, height, disabled }: TextAreaLightProps
 
   return <TextAreaLightContainer height={height} disabled={disabled}>{children}</TextAreaLightContainer>;
 }
+TextAreaLight.displayName = "TextAreaLight";

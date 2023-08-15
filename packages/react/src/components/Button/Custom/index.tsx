@@ -35,3 +35,4 @@ export function CustomButton({
     </CustomButtonContainer>
   );
 }
+CustomButton.displayName = "CustomButton";

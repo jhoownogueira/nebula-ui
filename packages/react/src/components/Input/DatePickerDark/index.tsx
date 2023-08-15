@@ -25,3 +25,4 @@ export function DatePickerDark({ date, icon, onChange }: DatePickerDarkProps) {
     </>
   );
 }
+DatePickerDark.displayName = "DatePickerDark";

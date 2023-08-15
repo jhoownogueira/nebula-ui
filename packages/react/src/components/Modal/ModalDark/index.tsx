@@ -65,3 +65,4 @@ export function ModalDark({
     </Dialog.Root>
   );
 }
+ModalDark.displayName = "ModalDark";

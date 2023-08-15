@@ -58,3 +58,4 @@ export function DateRangePickerDark({
     </>
   );
 }
+DateRangePickerDark.displayName = "DateRangePickerDark";

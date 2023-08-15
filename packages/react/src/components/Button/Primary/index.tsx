@@ -12,3 +12,4 @@ export function PrimaryButton({ variantRadius, variantSize, children, wFull, ...
   const { height, fontSizes, paddingSize } = SizeButton[variantSize];
   return <PrimaryButtonContainer wFull={wFull} radius={radius} height={height} fontSize={fontSizes} paddingSize={paddingSize}  {...props}>{children}</PrimaryButtonContainer>;
 }
+PrimaryButton.displayName = "PrimaryButton";

@@ -10,3 +10,4 @@ export function InputDark({ children, disabled }: InputDarkProps) {
 
   return <InputDarkContainer disabled={disabled}>{children}</InputDarkContainer>;
 }
+InputDark.displayName = "InputDark";

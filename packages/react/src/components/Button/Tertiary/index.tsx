@@ -12,3 +12,4 @@ export function TertiaryButton({ variantRadius, variantSize, children, wFull, di
   const { height, fontSizes, paddingSize } = SizeButton[variantSize];
   return <TertiaryButtonContainer wFull={wFull} radius={radius} height={height} fontSize={fontSizes} disabled={disabled} paddingSize={paddingSize}>{children}</TertiaryButtonContainer>;
 }
+TertiaryButton.displayName = "TertiaryButton";

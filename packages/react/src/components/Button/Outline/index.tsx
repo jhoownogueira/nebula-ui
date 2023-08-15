@@ -46,3 +46,4 @@ export function OutlineButton({
     </OutlineButtonContainer>
   );
 }
+OutlineButton.displayName = "OutlineButton";

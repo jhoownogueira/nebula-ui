@@ -12,3 +12,4 @@ export function SecondaryButton({ variantRadius, variantSize, children, wFull, d
   const { height, fontSizes, paddingSize } = SizeButton[variantSize];
   return <SecondaryButtonContainer wFull={wFull} radius={radius} height={height} fontSize={fontSizes} disabled={disabled} paddingSize={paddingSize}>{children}</SecondaryButtonContainer>;
 }
+SecondaryButton.displayName = "SecondaryButton";
