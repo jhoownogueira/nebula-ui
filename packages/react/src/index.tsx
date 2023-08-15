@@ -10,5 +10,7 @@ export * from "./components/Input/TextAreaDark";
 export * from "./components/Input/TextAreaLight";
 export * from "./components/Modal/ModalDark";
 export * from "./components/Loading/Spinner";
-export * from "./components/Input/DatePickerDark"
-export * from "./components/Input/DateRangePickerDark"
+export * from "./components/Input/DatePickerDark";
+export * from "./components/Input/DateRangePickerDark";
+export * from "./components/Pagination/LightPagination";
+export * from "./components/Pill/CustomFill/";
