@@ -65,6 +65,10 @@ export const SizeButton = {
 export const OutlineButtonContainer = styled.button<ButtonsContainerProps>`
   width: ${(props) => (props.wFull ? "100%" : "fit-content")};
   height: ${(props) => props.height};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   padding-left: ${(props) => props.paddingSize};
   padding-right: ${(props) => props.paddingSize};
   border: 1px solid

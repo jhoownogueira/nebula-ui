@@ -57,6 +57,10 @@ export const SizeButton = {
 export const CustomButtonContainer = styled.button<ButtonsContainerProps>`
   width: ${props => props.wFull? '100%' : 'fit-content'};
   height: ${props => props.height};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   padding-left: ${props => props.paddingSize};
   padding-right: ${props => props.paddingSize};
   border: none;
