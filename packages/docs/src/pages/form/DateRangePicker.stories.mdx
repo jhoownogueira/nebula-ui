@@ -11,7 +11,7 @@ import { useState } from "react";
 import { DatePickerDark } from "@orioncore/react";
 import { CalendarBlank } from "@phosphor-icons/react";
 
-export const MyComponent = () => {
+export const MyComponent() {
   const [startDate, setStartDate] = useState<Date | null>(new Date());
   const [endDate, setEndDate] = useState<Date | null>(new Date());
   const handleChangeStart = (date: Date | [Date | null, Date | null] | null) => {
@@ -21,14 +21,14 @@ export const MyComponent = () => {
     setEndDate(date as Date);
   };
   return (
-    <div style={{width: '350px'}}>
+    <div>
       <DateRangePickerDark
         icon={<CalendarBlank size={20} />}
         startDate={startDate}
         endDate={endDate}
         onChangeStart={handleChangeStart}
         onChangeEnd={handleChangeEnd}
-        flexRow
+        flex='row'
       />
     </div>
   );

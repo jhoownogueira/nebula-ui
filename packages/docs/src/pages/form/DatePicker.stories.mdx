@@ -11,13 +11,13 @@ import { useState } from "react";
 import { DatePickerDark } from "@orioncore/react";
 import { CalendarBlank } from "@phosphor-icons/react";
 
-export const MyComponent = () => {
+export const MyComponent() {
   const [date, setDate] = useState<Date | null>(new Date());
   const handleChangeDate = (date: Date | [Date | null, Date | null] | null) => {
     setDate(date as Date);
   };
   return (
-    <div style={{width: '350px'}}>
+    <div>
       <DatePickerDark
         onChange={handleChangeDate}
         date={date}

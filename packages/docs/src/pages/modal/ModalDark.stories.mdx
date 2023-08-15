@@ -1,0 +1,61 @@
+import { Meta } from "@storybook/addon-docs";
+import { DatePickerDark } from "@orioncore/react";
+import { CalendarBlank } from "@phosphor-icons/react";
+
+<Meta title="Dialog/Modal/Docs-ModalDark" />
+
+# Exemplo de uso
+
+```tsx
+import { useState } from "react";
+import { ModalDark, OutlineButton, PrimaryButton } from "@orioncore/react";
+import { Archive } from "@phosphor-icons/react";
+
+export const MyComponent() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function handleOpenChange(open: boolean) {
+    setIsOpen(open);
+  }
+
+  function handleOpen() {
+    setIsOpen(true);
+  }
+
+  function handleClose() {
+    setIsOpen(false);
+  }
+
+  return (
+    <>
+      <PrimaryButton wFull onClick={handleOpen} variantRadius="md" variantSize="md">
+        Abrir
+      </PrimaryButton>
+      <ModalDark 
+      iconTitle={<Archive size={20} />}
+      iconBgColor="orion_black_box"
+      iconColor="orion_white"
+      isOpen={isOpen}
+      onOpenChange={onOpenChange} // Opcional, omita para desativar fechamento com "esc" e "click" fora do modal.
+      title="Título do modal"
+      width="50%">
+
+        <main>
+          <h3>Modal Title</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+            quaerat.
+          </p>
+        </main>
+
+        <footer>
+          <OutlineButton onClick={handleClose} color="orion_white" variantSize="sm" variantRadius="sm">
+            Fechar
+          </OutlineButton>
+        </footer>
+
+      </ModalDark>
+    </>
+  );
+};
+```

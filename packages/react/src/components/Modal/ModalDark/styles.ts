@@ -119,6 +119,7 @@ export const ModalClose = styled(Dialog.Close)`
   text-indent: 100%;
   cursor: pointer;
   transition: all 0.2 ease-in-out;
+  outline: none;
 
   &:hover {
     color: ${colors.primary};
@@ -153,7 +154,7 @@ export const ModalContent = styled(Dialog.Content)<ModalProps>`
   flex-direction: column;
   gap: 0.5rem;
   border-radius: 6px;
-  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  padding: 2rem;
   background: ${colors.orion_black_box};
   animation: ${fadeInTranslateY} 0.2s forwards;
   font-family: ${fonts.default};

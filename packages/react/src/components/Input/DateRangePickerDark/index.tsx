@@ -12,7 +12,7 @@ export interface DateRangePickerDarkProps {
   icon: ReactNode;
   onChangeStart: (date: Date) => void;
   onChangeEnd: (date: Date) => void;
-  flexRow: boolean;
+  flex: 'row' | 'column';
 }
 
 export function DateRangePickerDark({
@@ -21,12 +21,12 @@ export function DateRangePickerDark({
   icon,
   onChangeStart,
   onChangeEnd,
-  flexRow,
+  flex,
 }: DateRangePickerDarkProps) {
   return (
     <>
       <GlobalDatePickerStyles />
-      <FlexContainer flexRow={flexRow}>
+      <FlexContainer flex={flex}>
         <fieldset className="datepicker">
           <label>Data inicial</label>
           <StyledPickerDate

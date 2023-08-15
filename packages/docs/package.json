@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@orioncore/react": "*",
+    "@orioncore/tokens": "*",
     "@phosphor-icons/react": "^2.0.10"
   },
   "devDependencies": {

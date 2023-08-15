@@ -65,7 +65,7 @@ export interface ModalDarkProps {
   | "tertiary_ghost_text",
   children: ReactNode;
   isOpen: boolean;
-  onOpenChange: (open: boolean) => void;
+  onOpenChange?: (open: boolean) => void;
   width?: string;
 }
 
