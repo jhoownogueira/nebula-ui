@@ -2,10 +2,13 @@ export * from "./components/Button/Primary";
 export * from "./components/Button/Secondary";
 export * from "./components/Button/Tertiary";
 export * from "./components/Button/Custom";
-export * from "./components/Button/Outline"
+export * from "./components/Button/Outline";
 export * from "./components/Table";
 export * from "./components/Input/InputDark";
 export * from "./components/Input/InputLight";
 export * from "./components/Input/TextAreaDark";
 export * from "./components/Input/TextAreaLight";
 export * from "./components/Modal/ModalDark";
+export * from "./components/Loading/Spinner";
+export * from "./components/Input/DatePickerDark"
+export * from "./components/Input/DateRangePickerDark"

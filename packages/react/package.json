@@ -16,6 +16,7 @@
   "devDependencies": {
     "@orioncore/tokens": "*",
     "@types/react": "^18.0.21",
+    "@types/react-datepicker": "^4.15.0",
     "@types/react-dom": "^18.0.6",
     "react": "^18.2.0",
     "tsup": "^6.2.3",
@@ -24,6 +25,8 @@
   "dependencies": {
     "@headlessui/react": "^1.7.16",
     "@radix-ui/react-dialog": "^1.0.4",
+    "date-fns": "^2.30.0",
+    "react-datepicker": "^4.16.0",
     "styled-components": "^6.0.7"
   }
 }

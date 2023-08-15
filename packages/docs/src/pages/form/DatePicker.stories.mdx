@@ -1,0 +1,28 @@
+import { Meta } from '@storybook/addon-docs'
+import { DatePickerDark } from "@orioncore/react"
+import { CalendarBlank } from "@phosphor-icons/react"
+
+<Meta title="Form/DatePicker/Docs-DatePicker" />
+
+# Exemplo de uso
+
+```tsx
+import { useState } from "react";
+import { DatePickerDark } from "@orioncore/react";
+import { CalendarBlank } from "@phosphor-icons/react";
+
+export const MyComponent = () => {
+  const [date, setDate] = useState<Date | null>(new Date());
+  const handleChangeDate = (date: Date | [Date | null, Date | null] | null) => {
+    setDate(date as Date);
+  };
+  return (
+    <div style={{width: '350px'}}>
+      <DatePickerDark
+        onChange={handleChangeDate}
+        date={date}
+        icon={<CalendarBlank size={20} />}
+      />
+    </div>
+  );
+};
