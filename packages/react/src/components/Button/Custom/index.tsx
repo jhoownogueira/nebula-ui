@@ -74,6 +74,7 @@ export function CustomButton({
   color,
   backgroundColor,
   wFull,
+  ...props
 }: CustomButtonProps) {
   const { radius } = SizeRadius[variantRadius];
   const { height, fontSizes, paddingSize } = SizeButton[variantSize];
@@ -87,6 +88,7 @@ export function CustomButton({
       disabled={disabled}
       paddingSize={paddingSize}
       wFull={wFull}
+      {...props}
     >
       {children}
     </CustomButtonContainer>
