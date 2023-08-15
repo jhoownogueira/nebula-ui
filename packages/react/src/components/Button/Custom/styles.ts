@@ -1,13 +1,15 @@
 import styled from 'styled-components'
 import { colors, radii, sizes, fontSizes, fontWeights, fonts } from '@orioncore/tokens'
 
+type ColorKeys = keyof typeof colors;
+
 interface ButtonsContainerProps {
   radius: string;
   height: string;
   fontSize: string;
   paddingSize: string;
-  color: string;
-  backgroundColor: string;
+  color: ColorKeys;
+  backgroundColor: ColorKeys;
   wFull?: boolean;
 }
 
@@ -64,12 +66,14 @@ export const CustomButtonContainer = styled.button<ButtonsContainerProps>`
   padding-left: ${props => props.paddingSize};
   padding-right: ${props => props.paddingSize};
   border: none;
-  background: ${props => props.backgroundColor};
+  background: ${(props) =>
+        props.backgroundColor ? colors[props.backgroundColor] : colors.orion_white};
   border-radius: ${props => props.radius};
   font-size: ${props => props.fontSize};
   font-family: ${fonts.default};
   font-weight: ${fontWeights.medium};
-  color: ${props => props.color};
+  color: ${(props) =>
+        props.color ? colors[props.color] : colors.orion_black};
   cursor: pointer;
   &:hover {
     transition: all 0.2s;
