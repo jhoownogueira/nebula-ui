@@ -7,6 +7,7 @@ export interface CustomButtonProps
   variantSize: "xs" | "sm" | "md" | "lg";
   color:
     | "orion_black"
+    | "orion_black_box"
     | "orion_white"
     | "sup_solar_yellow100"
     | "sup_ruby_pink100"
@@ -35,6 +36,7 @@ export interface CustomButtonProps
     | "tertiary_ghost_text";
   backgroundColor:
     | "orion_black"
+    | "orion_black_box"
     | "orion_white"
     | "sup_solar_yellow100"
     | "sup_ruby_pink100"

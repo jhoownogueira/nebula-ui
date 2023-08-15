@@ -1,6 +1,6 @@
 {
   "name": "@orioncore/react",
-  "version": "5.1.5",
+  "version": "5.1.6",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

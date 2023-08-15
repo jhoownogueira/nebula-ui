@@ -73,6 +73,7 @@ export const ModalHeader = styled.header<ModalHeaderProps>`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem 0;
   font-family: ${fonts.default};
   .withIcon {
     display: flex;

@@ -7,6 +7,7 @@ export interface ModalDarkProps {
   iconTitle?: ReactNode;
   iconColor?:
     | "orion_black"
+    | "orion_black_box"
     | "orion_white"
     | "sup_solar_yellow100"
     | "sup_ruby_pink100"
@@ -35,6 +36,7 @@ export interface ModalDarkProps {
     | "tertiary_ghost_text",
   iconBgColor?:
   | "orion_black"
+  | "orion_black_box"
   | "orion_white"
   | "sup_solar_yellow100"
   | "sup_ruby_pink100"
