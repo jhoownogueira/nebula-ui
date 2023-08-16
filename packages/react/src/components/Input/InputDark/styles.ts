@@ -10,6 +10,7 @@ interface InputDarkContainerProps {
 
 
 export const InputDarkContainer = styled.fieldset<InputDarkContainerProps>`
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -33,7 +34,7 @@ export const InputDarkContainer = styled.fieldset<InputDarkContainerProps>`
     transition: all 0.2s;
     border: 1px solid ${props => props.disabled ? colors.gray_900 : colors.gray_700 };
     background: ${props => props.disabled ? colors.gray_900 : colors.orion_black };
-    cursor: ${props => props.disabled ? 'not-allowed' : 'pointer' };
+    cursor: ${props => props.disabled ? 'not-allowed' : 'text' };
     color: ${colors.orion_white};
     font-family: ${fonts.default};
     &:placeholder {

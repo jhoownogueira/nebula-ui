@@ -33,7 +33,7 @@ export const TextAreaDarkContainer = styled.fieldset<TextAreaDarkContainerProps>
     transition: all 0.2s;
     border: 1px solid ${props => props.disabled ? colors.gray_900 : colors.gray_700 };
     background: ${props => props.disabled ? colors.gray_900 : colors.orion_black };
-    cursor: ${props => props.disabled ? 'not-allowed' : 'pointer' };
+    cursor: ${props => props.disabled ? 'not-allowed' : 'text' };
     color: ${colors.orion_white};
     font-family: ${fonts.default};
     resize: none;

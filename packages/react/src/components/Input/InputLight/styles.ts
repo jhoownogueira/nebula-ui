@@ -9,6 +9,7 @@ interface InputLightContainerProps {
 }
 
 export const InputLightContainer = styled.fieldset<InputLightContainerProps>`
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -30,9 +31,9 @@ export const InputLightContainer = styled.fieldset<InputLightContainerProps>`
     border-radius: 6px;
     outline: none;
     transition: all 0.2s;
-    border: 1px solid ${props => props.disabled ? colors.gray_200 : colors.gray_700 };
+    border: 1px solid ${props => props.disabled ? colors.gray_200 : colors.gray_300 };
     background: ${props => props.disabled ? colors.gray_200 : colors.orion_white };
-    cursor: ${props => props.disabled ? 'not-allowed' : 'pointer' };
+    cursor: ${props => props.disabled ? 'not-allowed' : 'text' };
     color: ${colors.orion_black};
     font-family: ${fonts.default};
     &:placeholder {

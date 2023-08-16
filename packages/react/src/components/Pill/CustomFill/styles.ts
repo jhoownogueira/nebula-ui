@@ -17,6 +17,7 @@ export const PillCustomContainer = styled.div<PillCustomContainerProps>`
   font-family: ${fonts.default};
 
   span {
+    white-space: nowrap;
     font-size: 0.875rem;
     background: ${(props) =>
         props.$backgroundColor ? colors[props.$backgroundColor] : colors.orion_white};
