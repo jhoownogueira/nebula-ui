@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import {
   ModalClose,
@@ -74,6 +74,8 @@ export interface ModalDarkProps {
   $onOpenChange?: (open: boolean) => void;
   $width?: string;
   $closable?: boolean;
+  $className?: string;
+  style?: CSSProperties;
 }
 
 export function ModalDark({
@@ -86,12 +88,14 @@ export function ModalDark({
   $iconColor,
   $iconBgColor,
   $width,
+  $className,
+  style,
 }: ModalDarkProps) {
   return (
     <Dialog.Root open={$isOpen} onOpenChange={$closable ? $onOpenChange : undefined}>
       <Dialog.Portal>
         <Overlay />
-        <ModalContent $width={$width}>
+        <ModalContent $width={$width} className={$className} style={style}>
           <ModalHeader $iconColor={$iconColor} $iconBgColor={$iconBgColor}>
             <ModalTitle>
               <div className="withIcon">
