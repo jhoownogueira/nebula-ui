@@ -7,10 +7,10 @@ export default {
   title: "Form/DatePicker",
   component: DateRangePickerDark,
   args: {
-    flex: "row",
+    $flex: "row",
   },
   argTypes: {
-    flex: {
+    $flex: {
       options: ["row", "column"],
       control: {
         type: "inline-radio",
@@ -33,11 +33,11 @@ export const DarkDateRangePicker: StoryObj = (args: any) => {
   return (
     <div style={{ width: "350px" }}>
       <DateRangePickerDark
-        icon={<CalendarBlank size={20} />}
-        startDate={startDate}
-        endDate={endDate}
-        onChangeStart={handleChangeStart}
-        onChangeEnd={handleChangeEnd}
+        $icon={<CalendarBlank size={20} />}
+        $startDate={startDate}
+        $endDate={endDate}
+        $onChangeStart={handleChangeStart}
+        $onChangeEnd={handleChangeEnd}
         {...args}
       />
     </div>
@@ -45,13 +45,13 @@ export const DarkDateRangePicker: StoryObj = (args: any) => {
 };
 
 DarkDateRangePicker.args = {
-  icon: <CalendarBlank size={20} />,
-  startDate: new Date(),
-  endDate: new Date(),
-  handleChangeStart: (date: Date | [Date | null, Date | null] | null) => {
+  $icon: <CalendarBlank size={20} />,
+  $startDate: new Date(),
+  $endDate: new Date(),
+  $handleChangeStart: (date: Date | [Date | null, Date | null] | null) => {
     console.log(date);
   },
-  handleChangeEnd: (date: Date | [Date | null, Date | null] | null) => {
+  $handleChangeEnd: (date: Date | [Date | null, Date | null] | null) => {
     console.log(date);
   },
 };

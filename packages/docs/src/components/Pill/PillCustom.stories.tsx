@@ -5,13 +5,13 @@ export default {
   title: "Pill/PillCustom",
   component: PillCustom,
   args: {
-    text: "Aprovado",
-    color: "orion_white",
-    backgroundColor: "sup_forest_green100",
-    borderColor: "sup_forest_green100",
+    $text: "Aprovado",
+    $color: "orion_white",
+    $backgroundColor: "sup_forest_green100",
+    $borderColor: "sup_forest_green100",
   },
   argTypes: {
-    color: {
+    $color: {
       options: [
         "orion_black",
         "orion_white",
@@ -29,7 +29,7 @@ export default {
         type: "select",
       },
     },
-    backgroundColor: {
+    $backgroundColor: {
       options: [
         "orion_black",
         "orion_white",
@@ -47,7 +47,7 @@ export default {
         type: "select",
       },
     },
-    borderColor: {
+    $borderColor: {
       options: [
         "orion_black",
         "orion_white",

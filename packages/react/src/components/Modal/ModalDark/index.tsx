@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import {
   ModalClose,
@@ -9,9 +9,9 @@ import {
 } from "./styles";
 
 export interface ModalDarkProps {
-  title?: string;
-  iconTitle?: ReactNode;
-  iconColor?:
+  $title?: string;
+  $iconTitle?: ReactNode;
+  $iconColor?:
     | "orion_black"
     | "orion_black_box"
     | "orion_white"
@@ -40,7 +40,7 @@ export interface ModalDarkProps {
     | "tertiary_hover"
     | "tertiary_ghost"
     | "tertiary_ghost_text";
-  iconBgColor?:
+  $iconBgColor?:
     | "orion_black"
     | "orion_black_box"
     | "orion_white"
@@ -70,36 +70,36 @@ export interface ModalDarkProps {
     | "tertiary_ghost"
     | "tertiary_ghost_text";
   children: ReactNode;
-  isOpen: boolean;
-  onOpenChange?: (open: boolean) => void;
-  width?: string;
-  closable?: boolean;
+  $isOpen: boolean;
+  $onOpenChange?: (open: boolean) => void;
+  $width?: string;
+  $closable?: boolean;
 }
 
 export function ModalDark({
   children,
-  isOpen,
-  onOpenChange,
-  closable,
-  title,
-  iconTitle,
-  iconColor,
-  iconBgColor,
-  width,
+  $isOpen,
+  $onOpenChange,
+  $closable,
+  $title,
+  $iconTitle,
+  $iconColor,
+  $iconBgColor,
+  $width,
 }: ModalDarkProps) {
   return (
-    <Dialog.Root open={isOpen}  onOpenChange={closable ? onOpenChange : undefined}>
+    <Dialog.Root open={$isOpen} onOpenChange={$closable ? $onOpenChange : undefined}>
       <Dialog.Portal>
         <Overlay />
-        <ModalContent width={width}>
-          <ModalHeader iconColor={iconColor} iconBgColor={iconBgColor}>
+        <ModalContent $width={$width}>
+          <ModalHeader $iconColor={$iconColor} $iconBgColor={$iconBgColor}>
             <ModalTitle>
               <div className="withIcon">
-                <div className="icon">{iconTitle}</div>
-                <h3>{title}</h3>
+                <div className="icon">{$iconTitle}</div>
+                <h3>{$title}</h3>
               </div>
             </ModalTitle>
-            {closable && <ModalClose />}
+            {$closable && <ModalClose />}
           </ModalHeader>
           {children}
         </ModalContent>

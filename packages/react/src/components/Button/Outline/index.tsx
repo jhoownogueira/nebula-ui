@@ -3,9 +3,9 @@ import { SizeRadius, SizeButton, OutlineButtonContainer } from "./styles";
 
 export interface OutlineButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variantRadius: "px" | "xs" | "sm" | "md" | "lg" | "full";
-  variantSize: "xs" | "sm" | "md" | "lg";
-  color:
+  $variantRadius: "px" | "xs" | "sm" | "md" | "lg" | "full";
+  $variantSize: "xs" | "sm" | "md" | "lg";
+  $color:
   | "orion_black"
   | "orion_black_box"
   | "orion_white"
@@ -34,29 +34,29 @@ export interface OutlineButtonProps
   | "tertiary_hover"
   | "tertiary_ghost"
   | "tertiary_ghost_text",
-  wFull?: boolean;
+  $wFull?: boolean;
 }
 
 export function OutlineButton({
-  variantRadius,
-  variantSize,
+  $variantRadius,
+  $variantSize,
   children,
-  wFull,
+  $wFull,
   disabled,
-  color,
+  $color,
   ...props
 }: OutlineButtonProps) {
-  const { radius } = SizeRadius[variantRadius];
-  const { height, fontSizes, paddingSize } = SizeButton[variantSize];
+  const { $radius } = SizeRadius[$variantRadius];
+  const { $height, $fontSizes, $paddingSize } = SizeButton[$variantSize];
   return (
     <OutlineButtonContainer
-      wFull={wFull}
-      radius={radius}
-      height={height}
-      fontSize={fontSizes}
+      $wFull={$wFull}
+      $radius={$radius}
+      $height={$height}
+      $fontSize={$fontSizes}
       disabled={disabled}
-      paddingSize={paddingSize}
-      color={color}
+      $paddingSize={$paddingSize}
+      $color={$color}
       {...props}
     >
       {children}

@@ -1,8 +1,8 @@
 import { PillCustomContainer } from "./styles";
 
 export interface PillCustomProps {
-  text: string;
-  color:
+  $text: string;
+  $color:
     | "orion_black"
     | "orion_black_box"
     | "orion_white"
@@ -31,7 +31,7 @@ export interface PillCustomProps {
     | "tertiary_hover"
     | "tertiary_ghost"
     | "tertiary_ghost_text";
-  backgroundColor:
+  $backgroundColor:
     | "orion_black"
     | "orion_black_box"
     | "orion_white"
@@ -60,7 +60,7 @@ export interface PillCustomProps {
     | "tertiary_hover"
     | "tertiary_ghost"
     | "tertiary_ghost_text";
-    borderColor:
+    $borderColor:
     | "orion_black"
     | "orion_black_box"
     | "orion_white"
@@ -92,15 +92,15 @@ export interface PillCustomProps {
 }
 
 export function PillCustom({
-  text,
-  color,
-  backgroundColor,
-  borderColor,
+  $text,
+  $color,
+  $backgroundColor,
+  $borderColor,
 }: PillCustomProps) {
   return (
-    <PillCustomContainer color={color} backgroundColor={backgroundColor} borderColor={borderColor}>
+    <PillCustomContainer $color={$color} $backgroundColor={$backgroundColor} $borderColor={$borderColor}>
       <span>
-       {text}
+       {$text}
       </span>
     </PillCustomContainer>
   );

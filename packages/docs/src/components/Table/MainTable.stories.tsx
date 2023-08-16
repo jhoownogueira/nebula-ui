@@ -19,17 +19,17 @@ export default {
 } as Meta;
 
 export const BasicTable: StoryObj<BasicTableProps> = ({
-  hoverColor,
-  breakPointMobile,
-  maxHeightMobile,
-  breakPointTablet,
-  maxHeightTablet,
-  breakPointLg,
-  maxHeightLg,
-  breakPointMd,
-  maxHeightMd,
-  breakPointSm,
-  maxHeightSm,
+  $hoverColor,
+  $breakPointMobile,
+  $maxHeightMobile,
+  $breakPointTablet,
+  $maxHeightTablet,
+  $breakPointLg,
+  $maxHeightLg,
+  $breakPointMd,
+  $maxHeightMd,
+  $breakPointSm,
+  $maxHeightSm,
 }) => (
   <TableRoot>
     <TableHeader>
@@ -43,24 +43,24 @@ export const BasicTable: StoryObj<BasicTableProps> = ({
       </table>
     </TableHeader>
     <TableBody
-      breakPointMobile={breakPointMobile}
-      maxHeightMobile={maxHeightMobile}
-      breakPointTablet={breakPointTablet}
-      maxHeightTablet={maxHeightTablet}
-      breakPointLg={breakPointLg}
-      maxHeightLg={maxHeightLg}
-      breakPointMd={breakPointMd}
-      maxHeightMd={maxHeightMd}
-      breakPointSm={breakPointSm}
-      maxHeightSm={maxHeightSm}
+      $breakPointMobile={$breakPointMobile}
+      $maxHeightMobile={$maxHeightMobile}
+      $breakPointTablet={$breakPointTablet}
+      $maxHeightTablet={$maxHeightTablet}
+      $breakPointLg={$breakPointLg}
+      $maxHeightLg={$maxHeightLg}
+      $breakPointMd={$breakPointMd}
+      $maxHeightMd={$maxHeightMd}
+      $breakPointSm={$breakPointSm}
+      $maxHeightSm={$maxHeightSm}
     >
       <table>
         <tbody>
-          <RowTableBody hoverColor={hoverColor}>
+          <RowTableBody $hoverColor={$hoverColor}>
             <td style={{ width: "100%" }}>John</td>
             <td style={{ width: "100px" }}>30</td>
           </RowTableBody>
-          <RowTableBody hoverColor={hoverColor}>
+          <RowTableBody $hoverColor={$hoverColor}>
             <td style={{ width: "100%" }}>John</td>
             <td style={{ width: "100px" }}>30</td>
           </RowTableBody>
@@ -72,15 +72,15 @@ export const BasicTable: StoryObj<BasicTableProps> = ({
 );
 
 BasicTable.args = {
-  breakPointMobile: "480px",
-  maxHeightMobile: "328px",
-  breakPointTablet: "800px",
-  maxHeightTablet: "350px",
-  breakPointLg: "1025px",
-  maxHeightLg: "328px",
-  breakPointMd: "1370px",
-  maxHeightMd: "328px",
-  breakPointSm: "1536px",
-  maxHeightSm: "500px",
-  hoverColor: "#E7E7E7",
+  $breakPointMobile: "480px",
+  $maxHeightMobile: "328px",
+  $breakPointTablet: "800px",
+  $maxHeightTablet: "350px",
+  $breakPointLg: "1025px",
+  $maxHeightLg: "328px",
+  $breakPointMd: "1370px",
+  $maxHeightMd: "328px",
+  $breakPointSm: "1536px",
+  $maxHeightSm: "500px",
+  $hoverColor: "#E7E7E7",
 };

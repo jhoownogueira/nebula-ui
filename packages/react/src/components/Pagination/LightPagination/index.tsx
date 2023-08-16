@@ -1,21 +1,21 @@
 import { PaginationContainer } from "./styles";
 
 export interface PaginationLightProps {
-  page: string;
-  totalPages: string;
-  handlePreviousPage: () => void;
-  handleNextPage: () => void;
+  $page: string;
+  $totalPages: string;
+  $handlePreviousPage: () => void;
+  $handleNextPage: () => void;
 }
 
 export function PaginationLight({
-  page,
-  totalPages,
-  handlePreviousPage,
-  handleNextPage,
+  $page,
+  $totalPages,
+  $handlePreviousPage,
+  $handleNextPage,
 }: PaginationLightProps) {
   return (
     <PaginationContainer>
-      <button className="prev-page" onClick={handlePreviousPage}>
+      <button className="prev-page" onClick={$handlePreviousPage}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -27,9 +27,9 @@ export function PaginationLight({
         </svg>
       </button>
       <span>
-        <strong>{page}</strong>/{totalPages}
+        <strong>{$page}</strong>/{$totalPages}
       </span>
-      <button className="next-page" onClick={handleNextPage}>
+      <button className="next-page" onClick={$handleNextPage}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"

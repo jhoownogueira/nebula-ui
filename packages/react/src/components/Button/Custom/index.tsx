@@ -3,9 +3,9 @@ import { SizeRadius, SizeButton, CustomButtonContainer } from "./styles";
 
 export interface CustomButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variantRadius: "px" | "xs" | "sm" | "md" | "lg" | "full";
-  variantSize: "xs" | "sm" | "md" | "lg";
-  color:
+  $variantRadius: "px" | "xs" | "sm" | "md" | "lg" | "full";
+  $variantSize: "xs" | "sm" | "md" | "lg";
+  $color:
     | "orion_black"
     | "orion_black_box"
     | "orion_white"
@@ -34,7 +34,7 @@ export interface CustomButtonProps
     | "tertiary_hover"
     | "tertiary_ghost"
     | "tertiary_ghost_text";
-  backgroundColor:
+  $backgroundColor:
     | "orion_black"
     | "orion_black_box"
     | "orion_white"
@@ -63,31 +63,31 @@ export interface CustomButtonProps
     | "tertiary_hover"
     | "tertiary_ghost"
     | "tertiary_ghost_text";
-  wFull?: boolean;
+  $wFull?: boolean;
 }
 
 export function CustomButton({
-  variantRadius,
-  variantSize,
+  $variantRadius,
+  $variantSize,
   children,
   disabled,
-  color,
-  backgroundColor,
-  wFull,
+  $color,
+  $backgroundColor,
+  $wFull,
   ...props
 }: CustomButtonProps) {
-  const { radius } = SizeRadius[variantRadius];
-  const { height, fontSizes, paddingSize } = SizeButton[variantSize];
+  const { $radius } = SizeRadius[$variantRadius];
+  const { $height, $fontSizes, $paddingSize } = SizeButton[$variantSize];
   return (
     <CustomButtonContainer
-      color={color}
-      backgroundColor={backgroundColor}
-      radius={radius}
-      height={height}
-      fontSize={fontSizes}
+      $color={$color}
+      $backgroundColor={$backgroundColor}
+      $radius={$radius}
+      $height={$height}
+      $fontSize={$fontSizes}
       disabled={disabled}
-      paddingSize={paddingSize}
-      wFull={wFull}
+      $paddingSize={$paddingSize}
+      $wFull={$wFull}
       {...props}
     >
       {children}

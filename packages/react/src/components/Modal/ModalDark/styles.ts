@@ -45,12 +45,12 @@ const fadeOutTranslateY = keyframes`
 type ColorKeys = keyof typeof colors;
 
 interface ModalProps {
-  width?: string;
+  $width?: string;
 }
 
 interface ModalHeaderProps {
-  iconBgColor?: ColorKeys;
-  iconColor?: ColorKeys;
+  $iconBgColor?: ColorKeys;
+  $iconColor?: ColorKeys;
 }
 
 export const Overlay = styled(Dialog.Overlay)`
@@ -87,11 +87,11 @@ export const ModalHeader = styled.header<ModalHeaderProps>`
       padding: 0.2rem;
       border-radius: ${radii.sm};
       background: ${(props) =>
-        props.iconBgColor ? colors[props.iconBgColor] : colors.orion_white};
+        props.$iconBgColor ? colors[props.$iconBgColor] : colors.orion_white};
 
       svg {
         color: ${(props) =>
-          props.iconColor ? colors[props.iconColor] : colors.orion_black};
+          props.$iconColor ? colors[props.$iconColor] : colors.orion_black};
       }
     }
     h3 {
@@ -149,7 +149,7 @@ export const ModalContent = styled(Dialog.Content)<ModalProps>`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: ${(props) => (props.width ? props.width : "32rem")};
+  max-width: ${(props) => (props.$width ? props.$width : "32rem")};
   display: flex;
   flex-direction: column;
   gap: 0.5rem;

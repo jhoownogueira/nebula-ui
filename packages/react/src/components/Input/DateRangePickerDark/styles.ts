@@ -4,13 +4,13 @@ import styled from "styled-components";
 import { colors, fonts } from "@orioncore/tokens";
 
 interface FlexContainerProps {
-  flex: 'row' | 'column';
+  $flex: 'row' | 'column';
 }
 
 export const FlexContainer = styled.div<FlexContainerProps>`
   width: 100%;
   display: flex;
-  flex-direction: ${(props) => (props.flex)};
+  flex-direction: ${(props) => (props.$flex)};
   align-items: center;
   justify-content: space-between;
   gap: 1rem;

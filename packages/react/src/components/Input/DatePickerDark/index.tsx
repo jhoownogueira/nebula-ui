@@ -3,12 +3,12 @@ import { StyledPickerDate, GlobalDatePickerStyles } from "./styles";
 import { ptBR } from "date-fns/locale";
 
 export interface DatePickerDarkProps {
-  date: Date | null;
-  icon: ReactNode;
-  onChange: (date: Date) => void;
+  $date: Date | null;
+  $icon: ReactNode;
+  $onChange: (date: Date) => void;
 }
 
-export function DatePickerDark({ date, icon, onChange }: DatePickerDarkProps) {
+export function DatePickerDark({ $date, $icon, $onChange }: DatePickerDarkProps) {
   return (
     <>
       <GlobalDatePickerStyles />
@@ -16,11 +16,11 @@ export function DatePickerDark({ date, icon, onChange }: DatePickerDarkProps) {
         <label>Data inicial</label>
         <StyledPickerDate
           locale={ptBR}
-          selected={date}
-          onChange={onChange}
+          selected={$date}
+          onChange={$onChange}
           dateFormat="dd/MM/yyyy"
         />
-        {icon}
+        {$icon}
       </fieldset>
     </>
   );

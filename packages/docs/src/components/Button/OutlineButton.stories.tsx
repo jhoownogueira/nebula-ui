@@ -5,26 +5,26 @@ export default {
   title: "Form/Button",
   component: OutlineButton,
   args: {
-    variantRadius: "md",
-    variantSize: "md",
+    $variantRadius: "md",
+    $variantSize: "md",
     children: "Outline Button",
     disabled: false,
-    wFull: false,
+    $wFull: false,
   },
   argTypes: {
-    variantRadius: {
+    $variantRadius: {
       options: ["px", "xs", "sm", "md", "lg", "full"],
       control: {
         type: "inline-radio",
       },
     },
-    variantSize: {
+    $variantSize: {
       options: ["xs", "sm", "md", "lg"],
       control: {
         type: "inline-radio",
       },
     },
-    color: {
+    $color: {
       options: [
         "orion_black",
         "orion_white",

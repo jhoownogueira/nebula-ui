@@ -2,24 +2,24 @@ import styled from "styled-components";
 import { colors, fonts } from "@orioncore/tokens";
 
 interface RowTableBodyContainerProps {
-  hoverColor?: string;
+  $hoverColor?: string;
 }
 
 interface TableBodyProps {
-  breakPointMobile?: string;
-  maxHeightMobile?: string;
+  $breakPointMobile?: string;
+  $maxHeightMobile?: string;
 
-  breakPointTablet?: string;
-  maxHeightTablet?: string;
+  $breakPointTablet?: string;
+  $maxHeightTablet?: string;
 
-  breakPointSm?: string;
-  maxHeightSm?: string;
+  $breakPointSm?: string;
+  $maxHeightSm?: string;
 
-  breakPointMd?: string;
-  maxHeightMd?: string;
+  $breakPointMd?: string;
+  $maxHeightMd?: string;
 
-  breakPointLg?: string;
-  maxHeightLg?: string;
+  $breakPointLg?: string;
+  $maxHeightLg?: string;
 }
 
 export const TableRootContainer = styled.div`
@@ -92,47 +92,47 @@ export const TableBodyContainer = styled.div<TableBodyProps>`
     }
   }
 
-  @media (max-width: ${(props) => props.breakPointLg ? props.breakPointLg : "1536px"}) {
+  @media (max-width: ${(props) => props.$breakPointLg ? props.$breakPointLg : "1536px"}) {
     table {
       tbody {
         max-height: ${(props) =>
-          props.maxHeightLg ? props.maxHeightLg : "500px"};
+          props.$maxHeightLg ? props.$maxHeightLg : "500px"};
       }
     }
   }
 
-  @media (max-width: ${(props) => props.breakPointMd ? props.breakPointMd : "1370px"}) {
+  @media (max-width: ${(props) => props.$breakPointMd ? props.$breakPointMd : "1370px"}) {
     table {
       tbody {
         max-height: ${(props) =>
-          props.maxHeightMd ? props.maxHeightMd : "328px"};
+          props.$maxHeightMd ? props.$maxHeightMd : "328px"};
       }
     }
   }
 
-  @media (max-width: ${(props) => props.breakPointSm ? props.breakPointSm : "1025px"}) {
+  @media (max-width: ${(props) => props.$breakPointSm ? props.$breakPointSm : "1025px"}) {
     table {
       tbody {
         max-height: ${(props) =>
-          props.maxHeightSm ? props.maxHeightSm : "328px"};
+          props.$maxHeightSm ? props.$maxHeightSm : "328px"};
       }
     }
   }
 
-  @media (max-width: ${(props) => props.breakPointTablet ? props.breakPointTablet : "800px"}) {
+  @media (max-width: ${(props) => props.$breakPointTablet ? props.$breakPointTablet : "800px"}) {
     table {
       tbody {
         max-height: ${(props) =>
-          props.maxHeightTablet ? props.maxHeightTablet : "350px"};
+          props.$maxHeightTablet ? props.$maxHeightTablet : "350px"};
       }
     }
   }
 
-  @media (max-width: ${(props) => props.breakPointMobile ? props.breakPointMobile : "480px"}) {
+  @media (max-width: ${(props) => props.$breakPointMobile ? props.$breakPointMobile : "480px"}) {
     table {
       tbody {
         max-height: ${(props) =>
-          props.maxHeightMobile ? props.maxHeightMobile : "328px"};
+          props.$maxHeightMobile ? props.$maxHeightMobile : "328px"};
       }
     }
   }
@@ -158,7 +158,7 @@ export const RowTableBodyContainer = styled.tr<RowTableBodyContainerProps>`
   height: 3.5rem;
   &:hover {
     background: ${(props) =>
-      props.hoverColor ? props.hoverColor : colors.gray_300};
+      props.$hoverColor ? props.$hoverColor : colors.gray_300};
     transition: all 0.2s;
   }
 `;

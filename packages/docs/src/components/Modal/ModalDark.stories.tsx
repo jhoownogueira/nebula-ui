@@ -7,7 +7,7 @@ export default {
   title: "Dialog/Modal",
   component: ModalDark,
   argTypes: {
-    iconColor: {
+    $iconColor: {
       options: [
         "orion_black",
         "orion_white",
@@ -25,7 +25,7 @@ export default {
         type: "select",
       },
     },
-    iconBgColor: {
+    $iconBgColor: {
       options: [
         "orion_black",
         "orion_white",
@@ -63,10 +63,10 @@ export const DarkModal: StoryObj<ModalDarkProps> = (args: any) => {
 
   return (
     <>
-      <PrimaryButton wFull onClick={handleOpen} variantRadius="md" variantSize="md">
+      <PrimaryButton $wFull onClick={handleOpen} $variantRadius="md" $variantSize="md">
         Abrir
       </PrimaryButton>
-      <ModalDark isOpen={isOpen} onOpenChange={handleOpenChange} closable={false} {...args} >
+      <ModalDark $isOpen={isOpen} $onOpenChange={handleOpenChange} closable={false} {...args} >
         <main
           style={{ display: "flex", flexDirection: "column", gap: "0.3rem" }}
         >
@@ -85,7 +85,7 @@ export const DarkModal: StoryObj<ModalDarkProps> = (args: any) => {
             justifyContent: "end",
           }}
         >
-          <OutlineButton onClick={handleClose} color="orion_white" variantSize="sm" variantRadius="sm">
+          <OutlineButton onClick={handleClose} $color="orion_white" $variantSize="sm" $variantRadius="sm">
             Fechar
           </OutlineButton>
         </footer>
@@ -95,8 +95,8 @@ export const DarkModal: StoryObj<ModalDarkProps> = (args: any) => {
 };
 
 DarkModal.args = {
-  title: "Titúlo do Modal",
-  iconTitle: <DevToLogo size={24} />,
-  width: "50%",
-  closable: false,
+  $title: "Titúlo do Modal",
+  $iconTitle: <DevToLogo size={24} />,
+  $width: "50%",
+  $closable: false,
 };

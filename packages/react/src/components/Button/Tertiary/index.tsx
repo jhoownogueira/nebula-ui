@@ -3,29 +3,29 @@ import { SizeRadius, SizeButton, TertiaryButtonContainer } from "./styles";
 
 export interface TertiaryButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variantRadius: "px" | "xs" | "sm" | "md" | "lg" | "full";
-  variantSize: "xs" | "sm" | "md" | "lg";
-  wFull?: boolean;
+  $variantRadius: "px" | "xs" | "sm" | "md" | "lg" | "full";
+  $variantSize: "xs" | "sm" | "md" | "lg";
+  $wFull?: boolean;
 }
 
 export function TertiaryButton({
-  variantRadius,
-  variantSize,
+  $variantRadius,
+  $variantSize,
   children,
-  wFull,
+  $wFull,
   disabled,
   ...props
 }: TertiaryButtonProps) {
-  const { radius } = SizeRadius[variantRadius];
-  const { height, fontSizes, paddingSize } = SizeButton[variantSize];
+  const { $radius } = SizeRadius[$variantRadius];
+  const { $height, $fontSizes, $paddingSize } = SizeButton[$variantSize];
   return (
     <TertiaryButtonContainer
-      wFull={wFull}
-      radius={radius}
-      height={height}
-      fontSize={fontSizes}
+      $wFull={$wFull}
+      $radius={$radius}
+      $height={$height}
+      $fontSize={$fontSizes}
       disabled={disabled}
-      paddingSize={paddingSize}
+      $paddingSize={$paddingSize}
       {...props}
     >
       {children}

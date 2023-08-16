@@ -7,10 +7,10 @@ export default {
   title: "Form/Button",
   component: PrimaryButton,
   args: {
-    variantRadius: "md",
-    variantSize: "md",
+    $variantRadius: "md",
+    $variantSize: "md",
     disabled: false,
-    wFull: false,
+    $wFull: false,
     children: (
       <>
         <Planet size={20} /> <span>Primary Button</span>
@@ -18,13 +18,13 @@ export default {
     ),
   },
   argTypes: {
-    variantRadius: {
+    $variantRadius: {
       options: ["px", "xs", "sm", "md", "lg", "full"],
       control: {
         type: "inline-radio",
       },
     },
-    variantSize: {
+    $variantSize: {
       options: ["xs", "sm", "md", "lg"],
       control: {
         type: "inline-radio",

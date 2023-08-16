@@ -28,18 +28,18 @@ export const MyComponent() {
 
   return (
     <>
-      <PrimaryButton wFull onClick={handleOpen} variantRadius="md" variantSize="md">
+      <PrimaryButton $wFull onClick={handleOpen} $variantRadius="md" $variantSize="md">
         Abrir
       </PrimaryButton>
       <ModalDark 
-      iconTitle={<Archive size={20} />}
-      iconBgColor="orion_black_box"
-      iconColor="orion_white"
-      isOpen={isOpen}
-      onOpenChange={onOpenChange}
+      $iconTitle={<Archive size={20} />}
+      $iconBgColor="orion_black_box"
+      $iconColor="orion_white"
+      $isOpen={isOpen}
+      $onOpenChange={onOpenChange}
       closable={false} // "true" para ativar fechamento com "esc" e "click" fora do modal.
-      title="Título do modal"
-      width="50%">
+      $title="Título do modal"
+      $width="50%">
 
         <main>
           <h3>Modal Title</h3>
@@ -50,7 +50,7 @@ export const MyComponent() {
         </main>
 
         <footer>
-          <OutlineButton onClick={handleClose} color="orion_white" variantSize="sm" variantRadius="sm">
+          <OutlineButton onClick={handleClose} $color="orion_white" $variantSize="sm" $variantRadius="sm">
             Fechar
           </OutlineButton>
         </footer>

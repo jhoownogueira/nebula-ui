@@ -16,18 +16,18 @@ export const DarkDatePicker: StoryObj = (args: any) => {
   return (
     <div style={{width: '350px'}}>
       <DatePickerDark
-        onChange={handleChangeDate}
-        date={date}
-        icon={<CalendarBlank size={20} />}
+        $onChange={handleChangeDate}
+        $date={date}
+        $icon={<CalendarBlank size={20} />}
       />
     </div>
   );
 };
 
 DarkDatePicker.args = {
-  icon: <CalendarBlank size={20} />,
-  date: new Date(),
-  onChange: (date: Date | [Date | null, Date | null] | null) => {
+  $icon: <CalendarBlank size={20} />,
+  $date: new Date(),
+  $onChange: (date: Date | [Date | null, Date | null] | null) => {
     console.log(date);
   }
 };
