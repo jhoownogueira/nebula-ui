@@ -23,7 +23,7 @@ export const PillCustomContainer = styled.div<PillCustomContainerProps>`
     border: 1px solid ${(props) =>
         props.$borderColor ? colors[props.$borderColor] : colors.orion_black};
     color: ${(props) =>
-        props.color ? colors[props.$color] : colors.orion_black};
+        props.$color ? colors[props.$color] : colors.orion_black};
     padding: 0.2rem 0.5rem;
     border-radius: 999px;
   }
