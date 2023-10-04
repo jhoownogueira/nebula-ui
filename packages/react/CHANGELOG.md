@@ -1,5 +1,11 @@
 # @orioncore/react
 
+## 6.0.0
+
+### Major Changes
+
+- new component paginationDark
+
 ## 5.0.0
 
 ### Major Changes

@@ -11,4 +11,5 @@ export * from "./components/Input/TextAreaLight";
 export * from "./components/Modal/ModalDark";
 export * from "./components/Loading/Spinner";
 export * from "./components/Pagination/LightPagination";
+export * from "./components/Pagination/DarkPagination";
 export * from "./components/Pill/CustomFill/";

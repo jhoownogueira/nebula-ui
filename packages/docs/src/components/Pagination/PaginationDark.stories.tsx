@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { PaginationLight, PaginationLightProps } from "@orioncore/react";
+import { PaginationDark, PaginationDarkProps } from "@orioncore/react";
 
 export default {
-  title: "Components/PaginationLight",
-  component: PaginationLight,
+  title: "Components/PaginationDark",
+  component: PaginationDark,
 } as Meta;
 
-export const LightPagination: StoryObj<PaginationLightProps> = (args: any) => {
+export const DarkPagination: StoryObj<PaginationDarkProps> = (args: any) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const handleNextPage = () => {
@@ -26,7 +26,7 @@ export const LightPagination: StoryObj<PaginationLightProps> = (args: any) => {
   };
   return (
     <>
-      <PaginationLight
+      <PaginationDark
         $handleNextPage={handleNextPage}
         $handlePreviousPage={handlePreviousPage}
         $page={currentPage.toString()}
@@ -36,7 +36,7 @@ export const LightPagination: StoryObj<PaginationLightProps> = (args: any) => {
   );
 };
 
-LightPagination.args = {
+DarkPagination.args = {
   $handleNextPage: () => {},
   $handlePreviousPage: () => {},
   $page: "1",
