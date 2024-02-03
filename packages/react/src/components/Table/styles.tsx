@@ -35,10 +35,10 @@ export const TableHeaderContainer = styled.div`
     font-family: ${fonts.default};
     thead {
       display: block;
-      background: ${colors.gray_300};
+      background: ${colors.neutral_100};
       border-radius: 8px 8px 0 0;
-      color: ${colors.gray_900};
-      border: 1px solid ${colors.gray_300};
+      color: ${colors.neutral_900};
+      border: 1px solid ${colors.neutral_100};
       font-size: 0.875rem;
       border-bottom: 0;
       tr {
@@ -57,7 +57,7 @@ export const TableHeaderContainer = styled.div`
             display: flex;
             align-items: center;
             justify-content: center;
-            color: ${colors.gray_900};
+            color: ${colors.neutral_900};
             font-size: 0.875rem;
             font-weight: 700;
             background: transparent;
@@ -74,7 +74,7 @@ export const TableBodyContainer = styled.div<TableBodyProps>`
     width: 100%;
     text-align: left;
     border-collapse: collapse;
-    border-top: 1px solid ${colors.gray_300};
+    border-top: 1px solid ${colors.neutral_100};
     font-family: ${fonts.default};
     tbody {
       display: block;
@@ -146,7 +146,7 @@ export const TableBodyContainer = styled.div<TableBodyProps>`
 export const TableFooterContainer = styled.div`
   width: 100%;
   height: 16px;
-  background: ${colors.gray_200};
+  background: ${colors.neutral_50};
   border-radius: 0 0 8px 8px;
 `;
 
@@ -156,14 +156,14 @@ export const RowTableBodyContainer = styled.tr<RowTableBodyContainerProps>`
   align-items: center;
   height: 2.5rem;
   background: ${colors.flash_white};
-  border-bottom: 1px solid ${colors.gray_300};
-  color: ${colors.gray_900};
+  border-bottom: 1px solid ${colors.neutral_100};
+  color: ${colors.neutral_900};
   font-size: 0.875rem;
   cursor: pointer;
   height: 3.5rem;
   &:hover {
     background: ${(props) =>
-      props.$hoverColor ? props.$hoverColor : colors.gray_300};
+      props.$hoverColor ? props.$hoverColor : colors.neutral_100};
     transition: all 0.2s;
   }
 `;

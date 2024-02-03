@@ -18,7 +18,8 @@ export const InputLightContainer = styled.fieldset<InputLightContainerProps>`
     font-size: 0.875rem;
     font-weight: 400;
     font-family: ${fonts.default};
-    color: ${(props) => (props.disabled ? colors.gray_300 : colors.gray_900)};
+    color: ${(props) =>
+      props.disabled ? colors.neutral_100 : colors.neutral_900};
   }
 
   input {
@@ -29,15 +30,15 @@ export const InputLightContainer = styled.fieldset<InputLightContainerProps>`
     outline: none;
     transition: all 0.2s;
     border: 1px solid
-      ${(props) => (props.disabled ? colors.gray_200 : colors.gray_300)};
+      ${(props) => (props.disabled ? colors.neutral_50 : colors.neutral_100)};
     background: ${(props) =>
-      props.disabled ? colors.gray_200 : colors.flash_white};
+      props.disabled ? colors.neutral_50 : colors.flash_white};
     cursor: ${(props) => (props.disabled ? "not-allowed" : "text")};
     color: ${colors.flash_black};
     font-family: ${fonts.default};
     &:placeholder {
       color: ${(props) =>
-        props.disabled ? colors.flash_white : colors.gray_300};
+        props.disabled ? colors.flash_white : colors.neutral_100};
     }
 
     &:focus {

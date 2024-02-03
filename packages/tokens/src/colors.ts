@@ -4,11 +4,6 @@ export const colors = {
   flash_white: "#ffffff",
   flash_white_box: "#F7F7F7",
 
-  gray_200: '#EDEDED',
-  gray_300: '#E7E7E7',
-  gray_700: '#777777',
-  gray_900: '#333333',
-
   primary: "#BC1421",
   primary_50: "#FFEEEA",
   primary_100: "#FFCCC2",
@@ -45,14 +40,6 @@ export const colors = {
   neutral_800: "#4B4B4B",
   neutral_900: "#393939",
 
-  sup_solar_yellow100: '#FFB319',
-  sup_solar_yellow10: '#FFD98D',
-  sup_solar_yellow60: '#FFC652',
-
-  sup_ruby_pink100: '#FF4E64',
-  sup_ruby_pink10: '#FF96A3',
-  sup_ruby_pink60: '#FF7687',
-
   success: "#4AD15F",
   success_50: "#E9F8E8",
   success_100: "#BDE8BC",
@@ -64,14 +51,6 @@ export const colors = {
   success_700: "#007105",
   success_800: "#005B00",
   success_900: "#004601",
-
-  sup_fire_red100: '#D33030',
-  sup_fire_red10: '#F06767',
-  sup_fire_red60: '#DB4E4E',
-
-  sup_mist_aquamarine100: '#95F1D5',
-  sup_mist_aquamarine10: '#BFFFEC',
-  sup_mist_aquamarine60: '#A2FADF',
 
   alert: "#FD650C",
   alert_50: "#FFEEE3",
@@ -97,10 +76,6 @@ export const colors = {
   info_800: "#0042BC",
   info_900: "#003290",
 
-  highlight: '#5C33CF',
-  sup_amethyst_purple10: '#9271EF',
-  sup_amethyst_purple60: '#734DDE',
-
   highlight: "#5C33CF",
   highlight_50: "#F9F0FF",
   highlight_100: "#EBD2FF",
@@ -112,21 +87,4 @@ export const colors = {
   highlight_700: "#693FD3",
   highlight_800: "#5330B0",
   highlight_900: "#402487",
-
-  sup_mocha_brown100: '#725550',
-  sup_mocha_brown10: '#A18681',
-  sup_mocha_brown60: '#856A66',
-
-  -----------------------------
-
-
-
-
-
-
-
-
-
-
-
-}
+};

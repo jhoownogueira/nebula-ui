@@ -114,7 +114,7 @@ export const ModalClose = styled(Dialog.Close)`
   height: 2em;
   border-radius: 50%;
   background: transparent;
-  color: ${colors.gray_200};
+  color: ${colors.neutral_50};
   font: inherit;
   text-indent: 100%;
   cursor: pointer;

@@ -9,21 +9,22 @@ export const PaginationContainer = styled.div`
   justify-content: center;
   font-family: ${fonts.default};
 
-  button.prev-page, button.next-page {
+  button.prev-page,
+  button.next-page {
     width: 38px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
-    border: 1px solid ${colors.gray_300};
+    border: 1px solid ${colors.neutral_100};
     background: transparent;
-    color: ${colors.gray_700};
+    color: ${colors.neutral_700};
     cursor: pointer;
 
     &:hover {
       transition: all 0.2s ease-in-out;
-      background: ${colors.gray_200};
+      background: ${colors.neutral_50};
     }
   }
 
@@ -38,13 +39,12 @@ export const PaginationContainer = styled.div`
   span {
     height: 97%;
     font-size: 0.875rem;
-    color: ${colors.gray_900};
+    color: ${colors.neutral_900};
     width: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid ${colors.gray_300};
-    border-top: 1px solid ${colors.gray_300};
+    border-bottom: 1px solid ${colors.neutral_100};
+    border-top: 1px solid ${colors.neutral_100};
   }
-
 `;

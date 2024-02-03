@@ -15,15 +15,10 @@ export default {
       options: [
         "flash_black",
         "flash_white",
-        "sup_solar_yellow100",
-        "sup_ruby_pink100",
         "success",
-        "sup_fire_red100",
-        "sup_mist_aquamarine100",
         "alert",
         "info",
         "highlight",
-        "sup_mocha_brown100",
       ],
       control: {
         type: "select",
@@ -33,15 +28,10 @@ export default {
       options: [
         "flash_black",
         "flash_white",
-        "sup_solar_yellow100",
-        "sup_ruby_pink100",
         "success",
-        "sup_fire_red100",
-        "sup_mist_aquamarine100",
         "alert",
         "info",
         "highlight",
-        "sup_mocha_brown100",
       ],
       control: {
         type: "select",
@@ -51,15 +41,10 @@ export default {
       options: [
         "flash_black",
         "flash_white",
-        "sup_solar_yellow100",
-        "sup_ruby_pink100",
         "success",
-        "sup_fire_red100",
-        "sup_mist_aquamarine100",
         "alert",
         "info",
         "highlight",
-        "sup_mocha_brown100",
       ],
       control: {
         type: "select",

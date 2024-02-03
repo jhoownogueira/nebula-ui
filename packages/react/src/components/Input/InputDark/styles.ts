@@ -18,7 +18,8 @@ export const InputDarkContainer = styled.fieldset<InputDarkContainerProps>`
     font-size: 0.875rem;
     font-weight: 400;
     font-family: ${fonts.default};
-    color: ${(props) => (props.disabled ? colors.gray_700 : colors.gray_300)};
+    color: ${(props) =>
+      props.disabled ? colors.neutral_700 : colors.neutral_100};
   }
 
   input {
@@ -29,14 +30,14 @@ export const InputDarkContainer = styled.fieldset<InputDarkContainerProps>`
     outline: none;
     transition: all 0.2s;
     border: 1px solid
-      ${(props) => (props.disabled ? colors.gray_900 : colors.gray_700)};
+      ${(props) => (props.disabled ? colors.neutral_900 : colors.neutral_700)};
     background: ${(props) =>
-      props.disabled ? colors.gray_900 : colors.flash_black};
+      props.disabled ? colors.neutral_900 : colors.flash_black};
     cursor: ${(props) => (props.disabled ? "not-allowed" : "text")};
     color: ${colors.flash_white};
     font-family: ${fonts.default};
     &:placeholder {
-      color: ${colors.gray_300};
+      color: ${colors.neutral_100};
     }
 
     &:focus {
