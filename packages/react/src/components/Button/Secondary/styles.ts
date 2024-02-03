@@ -1,5 +1,12 @@
-import styled from 'styled-components'
-import { colors, radii, sizes, fontSizes, fontWeights, fonts } from '@orioncore/tokens'
+import styled from "styled-components";
+import {
+  colors,
+  radii,
+  sizes,
+  fontSizes,
+  fontWeights,
+  fonts,
+} from "@orioncore/tokens";
 
 interface ButtonsContainerProps {
   $radius: string;
@@ -53,34 +60,34 @@ export const SizeButton = {
 };
 
 export const SecondaryButtonContainer = styled.button<ButtonsContainerProps>`
-  width: ${props => props.$wFull? '100%' : 'fit-content'};
-  height: ${props => props.$height};
+  width: ${(props) => (props.$wFull ? "100%" : "fit-content")};
+  height: ${(props) => props.$height};
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding-left: ${props => props.$paddingSize};
-  padding-right: ${props => props.$paddingSize};
+  padding-left: ${(props) => props.$paddingSize};
+  padding-right: ${(props) => props.$paddingSize};
   border: none;
   background: ${colors.secondary};
-  border-radius: ${props => props.$radius};
-  font-size: ${props => props.$fontSize};
+  border-radius: ${(props) => props.$radius};
+  font-size: ${(props) => props.$fontSize};
   font-family: ${fonts.default};
   font-weight: ${fontWeights.medium};
-  color: ${colors.orion_white};
+  color: ${colors.flash_white};
   cursor: pointer;
   &:hover {
     transition: all 0.2s;
-    background: ${colors.secondary_hover};
+    background: ${colors.secondary_600};
   }
 
   &:focus {
-    outline: 2px solid ${colors.secondary_ghost};
+    outline: 2px solid ${colors.secondary_100};
   }
 
   &:disabled {
-    background: ${colors.secondary_ghost};
-    color: ${colors.secondary_ghost_text};
+    background: ${colors.secondary_100};
+    color: ${colors.secondary_200};
     cursor: not-allowed;
   }
-`
+`;

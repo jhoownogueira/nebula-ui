@@ -26,16 +26,16 @@ export default {
     },
     $color: {
       options: [
-        "orion_black",
-        "orion_white",
+        "flash_black",
+        "flash_white",
         "sup_solar_yellow100",
         "sup_ruby_pink100",
-        "sup_forest_green100",
+        "success",
         "sup_fire_red100",
         "sup_mist_aquamarine100",
-        "sup_rustic_bronze100",
-        "sup_eletric_blue100",
-        "sup_amethyst_purple100",
+        "alert",
+        "info",
+        "highlight",
         "sup_mocha_brown100",
       ],
       control: {

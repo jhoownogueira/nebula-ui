@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { ModalDark, ModalDarkProps, OutlineButton, PrimaryButton } from "@orioncore/react";
+import {
+  ModalDark,
+  ModalDarkProps,
+  OutlineButton,
+  PrimaryButton,
+} from "@orioncore/react";
 import { DevToLogo } from "@phosphor-icons/react";
 
 export default {
@@ -9,16 +14,16 @@ export default {
   argTypes: {
     $iconColor: {
       options: [
-        "orion_black",
-        "orion_white",
+        "flash_black",
+        "flash_white",
         "sup_solar_yellow100",
         "sup_ruby_pink100",
-        "sup_forest_green100",
+        "success",
         "sup_fire_red100",
         "sup_mist_aquamarine100",
-        "sup_rustic_bronze100",
-        "sup_eletric_blue100",
-        "sup_amethyst_purple100",
+        "alert",
+        "info",
+        "highlight",
         "sup_mocha_brown100",
       ],
       control: {
@@ -27,16 +32,16 @@ export default {
     },
     $iconBgColor: {
       options: [
-        "orion_black",
-        "orion_white",
+        "flash_black",
+        "flash_white",
         "sup_solar_yellow100",
         "sup_ruby_pink100",
-        "sup_forest_green100",
+        "success",
         "sup_fire_red100",
         "sup_mist_aquamarine100",
-        "sup_rustic_bronze100",
-        "sup_eletric_blue100",
-        "sup_amethyst_purple100",
+        "alert",
+        "info",
+        "highlight",
         "sup_mocha_brown100",
       ],
       control: {
@@ -63,10 +68,20 @@ export const DarkModal: StoryObj<ModalDarkProps> = (args: any) => {
 
   return (
     <>
-      <PrimaryButton $wFull onClick={handleOpen} $variantRadius="md" $variantSize="md">
+      <PrimaryButton
+        $wFull
+        onClick={handleOpen}
+        $variantRadius="md"
+        $variantSize="md"
+      >
         Abrir
       </PrimaryButton>
-      <ModalDark $isOpen={isOpen} $onOpenChange={handleOpenChange} closable={false} {...args} >
+      <ModalDark
+        $isOpen={isOpen}
+        $onOpenChange={handleOpenChange}
+        closable={false}
+        {...args}
+      >
         <main
           style={{ display: "flex", flexDirection: "column", gap: "0.3rem" }}
         >
@@ -75,7 +90,6 @@ export const DarkModal: StoryObj<ModalDarkProps> = (args: any) => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
             quaerat.
           </p>
-
         </main>
         <footer
           style={{
@@ -85,7 +99,12 @@ export const DarkModal: StoryObj<ModalDarkProps> = (args: any) => {
             justifyContent: "end",
           }}
         >
-          <OutlineButton onClick={handleClose} $color="orion_white" $variantSize="sm" $variantRadius="sm">
+          <OutlineButton
+            onClick={handleClose}
+            $color="flash_white"
+            $variantSize="sm"
+            $variantRadius="sm"
+          >
             Fechar
           </OutlineButton>
         </footer>

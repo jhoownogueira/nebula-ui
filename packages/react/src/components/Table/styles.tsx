@@ -92,7 +92,8 @@ export const TableBodyContainer = styled.div<TableBodyProps>`
     }
   }
 
-  @media (max-width: ${(props) => props.$breakPointLg ? props.$breakPointLg : "1536px"}) {
+  @media (max-width: ${(props) =>
+      props.$breakPointLg ? props.$breakPointLg : "1536px"}) {
     table {
       tbody {
         max-height: ${(props) =>
@@ -101,7 +102,8 @@ export const TableBodyContainer = styled.div<TableBodyProps>`
     }
   }
 
-  @media (max-width: ${(props) => props.$breakPointMd ? props.$breakPointMd : "1370px"}) {
+  @media (max-width: ${(props) =>
+      props.$breakPointMd ? props.$breakPointMd : "1370px"}) {
     table {
       tbody {
         max-height: ${(props) =>
@@ -110,7 +112,8 @@ export const TableBodyContainer = styled.div<TableBodyProps>`
     }
   }
 
-  @media (max-width: ${(props) => props.$breakPointSm ? props.$breakPointSm : "1025px"}) {
+  @media (max-width: ${(props) =>
+      props.$breakPointSm ? props.$breakPointSm : "1025px"}) {
     table {
       tbody {
         max-height: ${(props) =>
@@ -119,7 +122,8 @@ export const TableBodyContainer = styled.div<TableBodyProps>`
     }
   }
 
-  @media (max-width: ${(props) => props.$breakPointTablet ? props.$breakPointTablet : "800px"}) {
+  @media (max-width: ${(props) =>
+      props.$breakPointTablet ? props.$breakPointTablet : "800px"}) {
     table {
       tbody {
         max-height: ${(props) =>
@@ -128,7 +132,8 @@ export const TableBodyContainer = styled.div<TableBodyProps>`
     }
   }
 
-  @media (max-width: ${(props) => props.$breakPointMobile ? props.$breakPointMobile : "480px"}) {
+  @media (max-width: ${(props) =>
+      props.$breakPointMobile ? props.$breakPointMobile : "480px"}) {
     table {
       tbody {
         max-height: ${(props) =>
@@ -150,7 +155,7 @@ export const RowTableBodyContainer = styled.tr<RowTableBodyContainerProps>`
   display: flex;
   align-items: center;
   height: 2.5rem;
-  background: ${colors.orion_white};
+  background: ${colors.flash_white};
   border-bottom: 1px solid ${colors.gray_300};
   color: ${colors.gray_900};
   font-size: 0.875rem;

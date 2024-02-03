@@ -1,13 +1,9 @@
 import styled from "styled-components";
-import {
-  colors,
-  fonts,
-} from "@orioncore/tokens";
+import { colors, fonts } from "@orioncore/tokens";
 
 interface InputDarkContainerProps {
   disabled?: boolean;
 }
-
 
 export const InputDarkContainer = styled.fieldset<InputDarkContainerProps>`
   position: relative;
@@ -22,7 +18,7 @@ export const InputDarkContainer = styled.fieldset<InputDarkContainerProps>`
     font-size: 0.875rem;
     font-weight: 400;
     font-family: ${fonts.default};
-    color: ${props => props.disabled ? colors.gray_700 : colors.gray_300 };
+    color: ${(props) => (props.disabled ? colors.gray_700 : colors.gray_300)};
   }
 
   input {
@@ -32,20 +28,20 @@ export const InputDarkContainer = styled.fieldset<InputDarkContainerProps>`
     border-radius: 6px;
     outline: none;
     transition: all 0.2s;
-    border: 1px solid ${props => props.disabled ? colors.gray_900 : colors.gray_700 };
-    background: ${props => props.disabled ? colors.gray_900 : colors.orion_black };
-    cursor: ${props => props.disabled ? 'not-allowed' : 'text' };
-    color: ${colors.orion_white};
+    border: 1px solid
+      ${(props) => (props.disabled ? colors.gray_900 : colors.gray_700)};
+    background: ${(props) =>
+      props.disabled ? colors.gray_900 : colors.flash_black};
+    cursor: ${(props) => (props.disabled ? "not-allowed" : "text")};
+    color: ${colors.flash_white};
     font-family: ${fonts.default};
     &:placeholder {
-
       color: ${colors.gray_300};
     }
 
     &:focus {
-      outline: 1px solid ${colors.orion_white};
+      outline: 1px solid ${colors.flash_white};
     }
-
   }
 
   @media (max-width: 480px) {

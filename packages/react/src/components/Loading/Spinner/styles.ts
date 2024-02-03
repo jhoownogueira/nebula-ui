@@ -5,7 +5,7 @@ export const SpinnerLoadingContainer = styled.span`
   width: 32px;
   height: 32px;
   border: 2px solid ${colors.primary};
-  border-bottom-color: ${colors.primary_ghost};
+  border-bottom-color: ${colors.primary_100};
   border-radius: 50%;
   display: inline-block;
   box-sizing: border-box;

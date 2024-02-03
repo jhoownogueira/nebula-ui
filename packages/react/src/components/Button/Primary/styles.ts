@@ -60,7 +60,7 @@ export const SizeButton = {
 };
 
 export const PrimaryButtonContainer = styled.button<ButtonsContainerProps>`
-  width: ${props => props.$wFull? '100%' : 'fit-content'};
+  width: ${(props) => (props.$wFull ? "100%" : "fit-content")};
   height: ${(props) => props.$height};
   display: flex;
   align-items: center;
@@ -74,20 +74,20 @@ export const PrimaryButtonContainer = styled.button<ButtonsContainerProps>`
   font-size: ${(props) => props.$fontSize};
   font-family: ${fonts.default};
   font-weight: ${fontWeights.medium};
-  color: ${colors.orion_white};
+  color: ${colors.flash_white};
   cursor: pointer;
   &:hover {
     transition: all 0.2s;
-    background: ${colors.primary_hover};
+    background: ${colors.primary_600};
   }
 
   &:focus {
-    outline: 2px solid ${colors.primary_ghost};
+    outline: 2px solid ${colors.primary_100};
   }
 
   &:disabled {
-    background: ${colors.primary_ghost};
-    color: ${colors.primary_ghost_text};
+    background: ${colors.primary_100};
+    color: ${colors.primary_200};
     cursor: not-allowed;
   }
 `;

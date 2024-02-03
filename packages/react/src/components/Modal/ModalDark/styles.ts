@@ -87,16 +87,16 @@ export const ModalHeader = styled.header<ModalHeaderProps>`
       padding: 0.2rem;
       border-radius: ${radii.sm};
       background: ${(props) =>
-        props.$iconBgColor ? colors[props.$iconBgColor] : colors.orion_white};
+        props.$iconBgColor ? colors[props.$iconBgColor] : colors.flash_white};
 
       svg {
         color: ${(props) =>
-          props.$iconColor ? colors[props.$iconColor] : colors.orion_black};
+          props.$iconColor ? colors[props.$iconColor] : colors.flash_black};
       }
     }
     h3 {
       font-size: ${fontSizes.xl};
-      color: ${colors.orion_white};
+      color: ${colors.flash_white};
     }
   }
 `;
@@ -155,7 +155,7 @@ export const ModalContent = styled(Dialog.Content)<ModalProps>`
   gap: 0.5rem;
   border-radius: 6px;
   padding: 2rem;
-  background: ${colors.orion_black_box};
+  background: ${colors.flash_black_box};
   animation: ${fadeInTranslateY} 0.2s forwards;
   font-family: ${fonts.default};
   &[data-state="closed"] {

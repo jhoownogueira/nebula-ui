@@ -72,13 +72,14 @@ export const OutlineButtonContainer = styled.button<ButtonsContainerProps>`
   padding-left: ${(props) => props.$paddingSize};
   padding-right: ${(props) => props.$paddingSize};
   border: 1px solid
-    ${(props) => (props.$color ? colors[props.$color] : colors.orion_white)};
+    ${(props) => (props.$color ? colors[props.$color] : colors.flash_white)};
   background: transparent;
   border-radius: ${(props) => props.$radius};
   font-size: ${(props) => props.$fontSize};
   font-family: ${fonts.default};
   font-weight: ${fontWeights.medium};
-  color: ${(props) => (props.$color ? colors[props.$color] : colors.orion_white)};
+  color: ${(props) =>
+    props.$color ? colors[props.$color] : colors.flash_white};
   cursor: pointer;
   &:hover {
     transition: all 0.2s;
@@ -86,13 +87,13 @@ export const OutlineButtonContainer = styled.button<ButtonsContainerProps>`
   }
 
   &:focus {
-    outline: 2px solid ${colors.tertiary_ghost};
+    outline: 2px solid ${colors.neutral_100};
   }
 
   &:disabled {
-    background: ${colors.tertiary_ghost};
-    color: ${colors.tertiary_ghost_text};
-    border: 1px solid ${colors.tertiary_ghost};
+    background: ${colors.neutral_100};
+    color: ${colors.neutral_200};
+    border: 1px solid ${colors.neutral_100};
     cursor: not-allowed;
   }
 `;
